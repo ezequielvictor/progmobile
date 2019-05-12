@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">trab</string>
+    <string name="alunos">Alunos</string>
+    <string name="cursos">Cursos</string>
+    <string name="registrarcurso">Salvar</string>
+    <string name="registraraluno">Salvar</string>
+    <string name="limpar">Limpar</string>
+    <string name="excluir">Excluir</string>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="145dp"
+        android:layout_height="58dp"
+        android:text="Cursos"
+        android:textAlignment="center"
+        android:textSize="100px"
+        app:layout_constraintBottom_toTopOf="@+id/edtNomeCurso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomeCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Curso:"
+        android:textAlignment="center"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/txtHoras"
+        app:layout_constraintEnd_toStartOf="@+id/edtNomeCurso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView" />
+
+    <TextView
+        android:id="@+id/txtHoras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total em horas:"
+        android:textAlignment="center"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/txtCodigo"
+        app:layout_constraintEnd_toStartOf="@+id/edtHoras"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeCurso" />
+
+    <TextView
+        android:id="@+id/txtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código do Curso:"
+        android:textSize="50px"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimparAluno"
+        app:layout_constraintEnd_toStartOf="@+id/edtCodigo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoras" />
+
+    <EditText
+        android:id="@+id/edtNomeCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtHoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtNomeCurso"
+        app:layout_constraintTop_toBottomOf="@+id/txtView" />
+
+    <EditText
+        android:id="@+id/edtHoras"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtCodigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtHoras"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeCurso" />
+
+    <Button
+        android:id="@+id/btnRegistrarCurso"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+
+        android:text="@string/registrarcurso"
+        app:layout_constraintBottom_toTopOf="@+id/listViewCursos"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluirAluno"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnLimparAluno"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
+
+    <Button
+        android:id="@+id/btnExcluirAluno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/excluir"
+        app:layout_constraintBottom_toTopOf="@+id/listViewCursos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarCurso"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
+
+    <Button
+        android:id="@+id/btnLimparAluno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/limpar"
+        app:layout_constraintBottom_toTopOf="@+id/listViewCursos"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistrarCurso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigo"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <ListView
+        android:id="@+id/listViewCursos"
+        android:layout_width="366dp"
+        android:layout_height="321dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarCurso" />
+
+    <EditText
+        android:id="@+id/edtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarCurso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoras" />
+
+</android.support.constraint.ConstraintLayout>
